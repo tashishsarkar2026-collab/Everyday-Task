@@ -1,0 +1,37 @@
+Absolutely, let's get you that memory jogger so you have a handy reference point. It's a great idea to cross-check with other models if you'd like, and see how they view it.
+
+---
+
+# 📋 Memory Jogger: Your RFP Task Breakdown
+
+### **1. The Core Problems from the Document**
+
+**MVP 1: Claims Automation**  
+- Problem: Manual, slow, and error-prone claim processing.
+- Solution Direction: Automate claim intake, extraction, and creation with AI agents and human-in-the-loop validation.
+
+**MVP 2: Underwriting Decision Support**  
+- Problem: Underwriters lack quick, AI-driven support for risk assessment.
+- Solution Direction: Provide a knowledge-graph-based assistant to help with risk assessment, data integration, and decision explanations.
+
+**MVP 3: Agentic AI Platform**  
+- Problem: Need for a unified platform to support scalable AI solutions for different regions and use cases.
+- Solution Direction: Build a platform that can handle shared models, customizable governance, and scalable deployment.
+
+---
+
+### **2. How We Think They Should Be Addressed**
+- For Claims Automation: We suggest a flow involving AI agents at each stage—intake, data extraction, and validation—layered with human review.
+- For Underwriting Support: We'll leverage a knowledge graph to connect various data sources and AI models, offering a dashboard that gives underwriters clear, explainable insights.
+- For the AI Platform: We envision a modular, scalable setup on Azure that can be customized for different countries and use cases.
+
+---
+
+### **3. What Is Exactly Expected of You**
+- You need to provide a solution document detailing the architecture and approach for each MVP.
+- You are expected to estimate the effort, resources, and timeline.
+- You need to prepare a polished, human-sounding final proposal that feels professionally crafted, rather than AI-generated.
+
+---
+
+Feel free to take this memory jogger and run it by any other models or use it as your personal cheat sheet. And once you’re ready, we can dive into creating that beautifully human, well-researched proposal.
