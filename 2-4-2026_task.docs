@@ -1,7 +1,9 @@
-📘 UNIQA RFP – Master Memory Jogger (Clean Markdown Version)
-#️⃣ 1. What the PPT Contains (Exact, Literal Scope Summary)
+.
+
+📘 UNIQA RFP – Final Memory Jogger (Strictly Based on PPT + Emails + Our Discussion)
+1️⃣ What the PPT Contains (Exact Content Only)
 1.1 Overall Context
-UNIQA Insurance Group has issued an RFP to build three AI MVPs, each with a 3‑month duration, starting July 2026, with proposal submission due 10 April 2026.
+UNIQA Insurance Group issued an RFP to build three AI MVPs, each with a 3‑month duration, starting July 2026, with proposal submission due 10 April 2026.
 
 The PPT defines three MVPs:
 
@@ -11,7 +13,7 @@ Early-stage claims processing is manual and slow.
 
 Email-based submissions require human triage.
 
-Data extraction and routing are inconsistent.
+Data enrichment and routing are inconsistent.
 
 Need for controlled automation with human oversight.
 
@@ -132,14 +134,13 @@ Compliance with enterprise architecture + security policies.
 
 MVP platform focused on claims + underwriting use cases.
 
-#️⃣ 2. What Email #1 Requests (Vaidehi → Prasad & Sanjukta)
-
+2️⃣ What Email #1 Requests (Vaidehi → Prasad & Sanjukta)
 Explicit Requests
 Confirm resource availability for all 3 MVPs.
 
 Provide CVs for required roles (preferably with insurance background).
 
-Understand that solution team is still designing the solution.
+Solution team is still designing the solution.
 
 Effort estimates are not yet available — need to be prepared.
 
@@ -147,13 +148,12 @@ RFP submission deadline: 10 April 2026.
 
 Expected project start: July 2026.
 
-Collaboration with Siro One (insurance expertise).
+Collaboration with Siro One.
 
 Implicit Ask
 → They need a solution plan + effort estimate to finalize staffing and commitments.
 
-#️⃣ 3. What Email #2 Requests (Sanjukta → You)
-
+3️⃣ What Email #2 Requests (Sanjukta → You)
 Explicit Requests
 Help with solutioning for all 3 MVPs.
 
@@ -168,8 +168,7 @@ Sharma to support with AIFS-specific details.
 Implicit Ask
 → You are responsible for producing the technical solution blueprint for the RFP.
 
-#️⃣ 4. Conclusions From Our Discussion
-
+4️⃣ Our Discussion Conclusions (Only What We Agreed On)
 4.1 Understanding the Three MVPs
 MVP 1 = Operational automation (claims).
 
@@ -202,7 +201,7 @@ Risks & assumptions
 
 Integration approach
 
-Azure architecture
+Azure architecture (because PPT explicitly requires Azure)
 
 Governance & compliance approach
 
@@ -212,30 +211,45 @@ Knowledge graph design (for MVP2)
 
 Agentic platform blueprint (for MVP3)
 
-4.4 Why We Need Clear Layered Logic
-We discussed:
+4.4 Clarifications We Agreed On
+No OCR mentioned in PPT
 
-Simple rule-based layer
+No confidence scoring mentioned
 
-Deeper reasoning layer
+No extraction pipelines mentioned
 
-Platform orchestration layer
+No backend orchestration details mentioned
 
-Purpose:
+Only conceptual routing mentioned
 
-Avoid hallucination
+Azure is explicitly required
 
-Ensure predictable behavior
+Human-in-the-loop is explicitly required
 
-Provide controlled escalation
+AI agents are explicitly required
 
-#️⃣ 5. Tech Stack We Agreed On (and Why)
+Knowledge graph is explicitly required
 
+5️⃣ Tech Stack We Agreed On (Only Based on PPT Requirements)
 5.1 Cloud
 Microsoft Azure  
-Why: Explicitly required in PPT.
+(Explicitly required in PPT)
 
 5.2 AI Components
+Chosen because PPT requires:
+
+AI agents
+
+Knowledge ingestion
+
+Retrieval
+
+Explainability
+
+Auditability
+
+So we selected:
+
 Azure OpenAI
 
 Azure ML
@@ -244,28 +258,42 @@ Azure Cognitive Search
 
 Knowledge Graph (Neo4j or Cosmos DB Gremlin)
 
-Why: PPT requires knowledge ingestion, retrieval, explainability, auditability.
-
 5.3 Integration Layer
+Chosen because PPT requires:
+
+Integration with backend systems
+
+Integration with enterprise systems
+
+So we selected:
+
 Azure API Management
 
 Azure Functions
 
 Event Grid / Service Bus
 
-Why: Required for backend integration in claims and underwriting.
-
 5.4 Data Layer
+Chosen because PPT requires:
+
+Data provenance
+
+Auditability
+
+Compliance
+
+So we selected:
+
 Azure Data Lake
 
 Azure SQL / Cosmos DB
 
 Azure Purview
 
-Why: PPT requires data provenance, auditability, compliance.
-
 5.5 Platform Layer (MVP 3)
-Model abstraction
+Chosen because PPT explicitly lists:
+
+Governance
 
 Policy enforcement
 
@@ -273,12 +301,17 @@ Content filtering
 
 Audit logging
 
-Observability (Azure Monitor, App Insights)
+Observability
 
-Why: All explicitly listed in PPT.
+So we selected:
 
-#️⃣ 6. What Is Expected From You (Final Deliverables)
+Azure Monitor
 
+App Insights
+
+Custom governance layer
+
+6️⃣ What Is Expected From You (Final Deliverables)
 1. Solution Blueprint Document
 For all 3 MVPs:
 
