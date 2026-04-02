@@ -1,37 +1,390 @@
-Absolutely, let's get you that memory jogger so you have a handy reference point. It's a great idea to cross-check with other models if you'd like, and see how they view it.
+📘 UNIQA RFP – Master Memory Jogger (Markdown)
+A portable, context‑complete reference for any LLM
 
----
+#️⃣ 1. What the PPT Contains (Exact Content Summary)
+1.1 Overall Ask
+UNIQA Insurance Group has issued an RFP to build three AI MVPs, each lasting 3 months, starting July 2026.
 
-# 📋 Memory Jogger: Your RFP Task Breakdown
+The PPT defines three MVPs:
 
-### **1. The Core Problems from the Document**
+MVP 1 – Claims Processing Automation
+Problems Identified in PPT:
 
-**MVP 1: Claims Automation**  
-- Problem: Manual, slow, and error-prone claim processing.
-- Solution Direction: Automate claim intake, extraction, and creation with AI agents and human-in-the-loop validation.
+Early-stage claims processing is manual, slow, and inconsistent.
 
-**MVP 2: Underwriting Decision Support**  
-- Problem: Underwriters lack quick, AI-driven support for risk assessment.
-- Solution Direction: Provide a knowledge-graph-based assistant to help with risk assessment, data integration, and decision explanations.
+Email-based submissions require human triage.
 
-**MVP 3: Agentic AI Platform**  
-- Problem: Need for a unified platform to support scalable AI solutions for different regions and use cases.
-- Solution Direction: Build a platform that can handle shared models, customizable governance, and scalable deployment.
+Data extraction and routing are error-prone.
 
----
+Need for low-risk, controlled automation with human oversight.
 
-### **2. How We Think They Should Be Addressed**
-- For Claims Automation: We suggest a flow involving AI agents at each stage—intake, data extraction, and validation—layered with human review.
-- For Underwriting Support: We'll leverage a knowledge graph to connect various data sources and AI models, offering a dashboard that gives underwriters clear, explainable insights.
-- For the AI Platform: We envision a modular, scalable setup on Azure that can be customized for different countries and use cases.
+What the PPT Requests:
 
----
+AI-supported automation for early-stage claims.
 
-### **3. What Is Exactly Expected of You**
-- You need to provide a solution document detailing the architecture and approach for each MVP.
-- You are expected to estimate the effort, resources, and timeline.
-- You need to prepare a polished, human-sounding final proposal that feels professionally crafted, rather than AI-generated.
+Three use cases:
 
----
+Legal Protection (Consultation Insurance)
 
-Feel free to take this memory jogger and run it by any other models or use it as your personal cheat sheet. And once you’re ready, we can dive into creating that beautifully human, well-researched proposal.
+Car Casco Claim Registration
+
+MTPL Recourse Detection
+
+Email intake → AI extraction → enrichment → routing → claim creation.
+
+Human-in-the-loop escalation.
+
+Integration with claims backend.
+
+Azure-based deployment.
+
+Full auditability, compliance, modularity.
+
+MVP 2 – Corporate Underwriting Assistant
+Problems Identified in PPT:
+
+Underwriters lack fast, AI-supported decision tools.
+
+Risk assessment requires data from multiple systems.
+
+No unified knowledge representation.
+
+What the PPT Requests:
+
+AI-powered Underwriting Assistant.
+
+Integrations with:
+
+CBN
+
+Inquiry Manager
+
+Large Loss Database
+
+GEAM
+
+Google Maps
+
+Knowledge Graph for risk data.
+
+AI agents for:
+
+Risk assessment
+
+Compliance checks
+
+Wording comparison
+
+Underwriter Decision Dashboard.
+
+Explainability, provenance, auditability.
+
+Azure-based scalable architecture.
+
+Training + adoption support.
+
+MVP 3 – Agentic AI Platform
+Problems Identified in PPT:
+
+UNIQA lacks a unified, governed AI platform.
+
+Need for reusable, scalable, compliant AI capabilities.
+
+What the PPT Requests:
+
+Group-level AI platform with:
+
+Shared core model
+
+Country-specific integrations
+
+Integration with enterprise systems:
+
+IAM
+
+Data platforms
+
+BPM/workflow
+
+Governance layer:
+
+Policy enforcement
+
+Content filtering
+
+Audit logging
+
+Knowledge ingestion + retrieval
+
+Model abstraction layer
+
+Observability + monitoring
+
+Developer enablement framework
+
+Co-build model with knowledge transfer
+
+Azure-based scalable architecture
+
+1.2 Skills Required (from PPT)
+AI/ML Architect
+
+ML Engineer
+
+Data Scientist
+
+Data Engineer
+
+MLOps
+
+Integration Engineer
+
+Backend Engineer
+
+AI Platform Engineer
+
+Product Owner
+
+Business Analyst
+
+UX/UI
+
+Data Privacy & Compliance
+
+QA
+
+Security
+
+PM/Delivery Lead
+
+Transformation Consultant
+
+Knowledge Transfer Lead
+
+#️⃣ 2. What Email #1 Requests
+Sender: Vaidehi
+Recipients: Prasad & Sanjukta
+
+Requests:
+
+Confirm resource availability for the 3 MVPs.
+
+Provide CVs for required roles (preferably with insurance background).
+
+Understand that solution team is still designing the solution.
+
+No effort estimates yet—needs to be prepared.
+
+RFP submission deadline: 10 April 2026.
+
+Project start: July 2026.
+
+Collaboration with Siro One.
+
+Implicit Ask:  
+→ They need a solution plan + effort estimate to finalize staffing.
+
+#️⃣ 3. What Email #2 Requests
+Sender: Sanjukta
+Recipient: Ashish (you)
+
+Requests:
+
+Help with solutioning for all 3 MVPs.
+
+Help with effort estimation.
+
+Review the PPT and derive the solution approach.
+
+ETA for draft solution: 7 April.
+
+Sharma to support with AIFS-specific details.
+
+Implicit Ask:  
+→ You are responsible for producing the technical solution blueprint.
+
+#️⃣ 4. Conclusions From Our Discussion
+4.1 What the Three MVPs Represent
+MVP 1 = Operational automation (claims).
+
+MVP 2 = Decision intelligence (underwriting).
+
+MVP 3 = Foundational AI platform (agentic + governed).
+
+4.2 How They Fit Together
+MVP1 and MVP2 are use cases.
+
+MVP3 is the platform that will eventually host and scale these use cases.
+
+MVP3 must be designed with MVP1 and MVP2 as the first tenants.
+
+4.3 What Your Role Actually Is
+You are not building the MVPs.
+You are designing the plan for how they will be built.
+
+Your deliverables include:
+
+Solution architecture for each MVP
+
+Effort estimation
+
+Delivery timeline
+
+Team structure
+
+Risks & assumptions
+
+Integration approach
+
+Azure architecture
+
+Governance & compliance approach
+
+Human-in-the-loop design
+
+Knowledge graph design (for MVP2)
+
+Agentic platform blueprint (for MVP3)
+
+4.4 Why We Need a Clear Handoff Logic
+We discussed the idea of:
+
+First layer: simple rule-based acceptance/rejection
+
+Second layer: deeper reasoning when rules fail
+
+Third layer: platform-level orchestration
+
+This ensures:
+
+No hallucination
+
+No forced answers
+
+Clear escalation path
+
+Predictable behavior
+
+#️⃣ 5. Tech Stack We Agreed On (and Why)
+5.1 Azure as the Core Cloud
+Why:
+
+UNIQA already uses Azure (explicit in PPT).
+
+Enterprise compliance + IAM integration is easier.
+
+Native support for ML, agents, and observability.
+
+5.2 AI Components
+Azure OpenAI (for LLMs + agents)
+
+Azure ML (for training, pipelines, monitoring)
+
+Azure Cognitive Search (for retrieval)
+
+Knowledge Graph (Neo4j or Azure Cosmos DB Gremlin API)
+
+Why:
+
+PPT explicitly requires knowledge ingestion, retrieval, explainability, auditability.
+
+5.3 Integration Layer
+Azure API Management
+
+Azure Functions
+
+Event Grid / Service Bus
+
+Why:
+
+Required for backend integration in claims and underwriting.
+
+5.4 Data Layer
+Azure Data Lake
+
+Azure SQL / Cosmos DB
+
+Azure Purview (governance)
+
+Why:
+
+PPT requires data provenance, auditability, compliance.
+
+5.5 Platform Layer (MVP 3)
+Model abstraction layer
+
+Policy enforcement
+
+Content filtering
+
+Audit logging
+
+Observability (Azure Monitor, App Insights)
+
+Why:
+
+PPT explicitly lists these as required capabilities.
+
+#️⃣ 6. What Is Expected From You (Final Clear List)
+You must deliver:
+1. Solution Blueprint Document
+For all 3 MVPs:
+
+Architecture diagrams
+
+Data flows
+
+Integration flows
+
+AI agent design
+
+Knowledge graph design
+
+Human-in-the-loop design
+
+Governance model
+
+Security & compliance model
+
+2. Effort Estimation
+Person-months
+
+Role-wise effort
+
+Onshore/offshore split
+
+Timeline per MVP
+
+3. Delivery Plan
+3-month plan per MVP
+
+Dependencies
+
+Parallelization strategy
+
+Milestones
+
+4. Team Structure
+Roles
+
+Responsibilities
+
+RACI
+
+Partner involvement (Siro One, Detecon)
+
+5. Risks & Assumptions
+Data availability
+
+Integration readiness
+
+SME availability
+
+Compliance constraints
+
+6. Executive Summary
+Business value
+
+Why this approach
+
+Why your company is the right partner
