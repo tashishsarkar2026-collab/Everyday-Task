@@ -1,0 +1,42 @@
+flowchart LR
+
+    %% Ingestion
+    subgraph A[Ingestion Layer]
+        A1[Email Inbox]
+        A2[Graph API (Webhook)]
+        A3[FastAPI Ingestion]
+    end
+
+    %% Processing
+    subgraph B[AI Processing Layer]
+        B1[OCR / Text Extraction]
+        
+        subgraph B2[Agent Layer]
+            C1[Classifier Agent]
+            C2[Extraction Agent]
+            C3[Validation Agent]
+        end
+    end
+
+    %% Output
+    subgraph D[Decision Layer]
+        D1{Valid?}
+        D2[Create Claim API]
+        D3[Human Review Queue]
+    end
+
+    %% Storage & Monitoring
+    subgraph E[Support Services]
+        E1[Blob Storage]
+        E2[SQL DB]
+        E3[Monitoring]
+    end
+
+    %% Flow
+    A1 --> A2 --> A3 --> B1 --> C1 --> C2 --> C3 --> D1
+    D1 -->|Yes| D2 --> E2
+    D1 -->|No| D3 --> D2
+
+    A3 --> E1
+    D2 --> E3
+    C3 --> E3
