@@ -1,0 +1,41 @@
+flowchart TD
+
+    A[Email Inbox] --> B[Microsoft Graph Subscription (Webhook)]
+
+    B --> C[FastAPI Webhook Endpoint]
+
+    C --> D[Fetch Email via Graph API]
+
+    D --> E[FastAPI Ingestion Service]
+
+    E --> F[Azure Blob Storage (Store Attachments)]
+
+    E --> G[Document Processing]
+    G -->|PDF/Image| H[Azure Form Recognizer OCR]
+    G -->|Text| I[Text Extraction]
+
+    H --> J[Unified Text]
+    I --> J
+
+    J --> K[Classifier Agent (Azure OpenAI)]
+    K --> L[Claim Type]
+
+    L --> M[Extraction Agent (Azure OpenAI)]
+    M --> N[Structured Entities]
+
+    N --> O[Validation Agent (Rules + LLM)]
+
+    O -->|Valid| P[Create Claim API (Backend)]
+    O -->|Invalid| Q[Azure Service Bus Queue]
+
+    Q --> R[Human Review UI]
+    R --> S[Manual Correction]
+    S --> P
+
+    P --> T[Azure SQL / Cosmos DB]
+
+    C --> U[Logging & Monitoring]
+    O --> U
+    P --> U
+
+    U --> V[Azure Monitor / App Insights]
