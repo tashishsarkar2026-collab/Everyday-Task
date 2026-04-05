@@ -1,101 +1,47 @@
-You are an expert enterprise solution architect.
-
-Create a modern, clean, and professional architecture diagram for an "Agentic AI Platform (MVP-3)" designed for enterprise use.
-
-### Context:
-This platform is NOT a single application. It is a reusable backend platform that enables rapid development of multiple AI use cases (e.g., underwriting, fraud detection, claims processing) using shared components.
-
-The architecture must clearly show how the system is modular, reusable, and scalable.
-
----
-
-### Requirements:
-
-#### 1. High-Level Layers (must be visually separated)
-
-1. Client Layer
-   - Underwriter UI / Web App
-   - External Systems / APIs
-
-2. API Layer
-   - FastAPI Gateway
-   - Authentication (Azure AD / IAM)
-
-3. Agent Layer (Core Brain)
-   - LLM-based Agent
-   - Orchestration Logic
-   - Decision Engine
-
-4. Core Platform Modules (very important section)
-   Show these as independent reusable components:
-   - Tool Registry (dynamic tool calling)
-   - RAG Module (document ingestion + retrieval)
-   - LLM Abstraction Layer (multi-model support)
-   - Configuration Layer (use-case configs: prompts, tools, workflows)
-
-5. Data & Integration Layer
-   - External APIs (policy system, claims DB, fraud services)
-   - Vector Database (for embeddings)
-   - Blob Storage / Document Storage
-
-6. Governance & Observability Layer (cross-cutting)
-   - Logging & Monitoring
-   - Audit Trail
-   - Security / Content Filtering
-   - Error Handling / Retry
-
----
-
-#### 2. Flow (must be shown with arrows)
-
-Show this flow clearly:
-
-User → API → Agent → (Tools / RAG / LLM) → Data Sources → Response
-
-Also show:
-- Agent calling Tool Registry
-- RAG fetching from Vector DB
-- LLM abstraction routing to models
-
----
-
-#### 3. Reusability Highlight (VERY IMPORTANT)
-
-Add a side section or annotation:
-
-"Same Platform, Different Use Cases"
-
-Examples:
-- Underwriting → uses Tool A, B
-- Fraud Detection → uses Tool C, D
-- Claims Processing → uses Tool E, F
-
-Show that only configuration changes, not architecture.
-
----
-
-#### 4. Style Guidelines
-
-- Use a clean, modern cloud architecture style (similar to Azure/AWS diagrams)
-- Use icons or labeled boxes for each component
-- Group components into clearly defined layers
-- Use directional arrows for data flow
-- Keep it visually balanced (not cluttered)
-
----
-
-#### 5. Output Format
-
-- Provide diagram in a format that can be recreated in draw.io / diagrams.net
-- If possible, also include a structured representation (like Mermaid or XML)
-
----
-
-### Goal:
-
-The diagram should make it immediately clear that:
-- This is a PLATFORM, not a single application
-- Components are reusable and configurable
-- New AI use cases can be built quickly without rewriting the system
-
-Avoid generic diagrams. Make it specific, structured, and enterprise-ready.
+Claim Intake
+Structured claim data ingested via MVP1 APIs
+Pre-processed and ready for AI-driven evaluation
+AI Orchestration
+FastAPI triggers agent workflows
+Agent dynamically orchestrates tools and data sources
+Intelligent Data Retrieval
+Real-time data fetching from internal & external systems
+Context enrichment via tool calling and RAG
+AI Reasoning
+LLM evaluates risk, context, and business rules
+Generates insights, recommendations, and explanations
+Decision Support
+Risk-based outcomes: Approve / Reject / Review
+Human-in-the-loop validation for critical cases
+Explainable AI-driven decisions
+Key Outcome
+End-to-end intelligent underwriting powered by a reusable AI platform
+🎯 Slide 2: Architecture Components (Layered View)
+✅ Final Content (clean + structured)
+Backend / API Layer
+FastAPI-based orchestration layer
+Handles API routing, workflow execution, and request management
+Agent & Decision Layer
+LLM-powered agent (Azure OpenAI)
+Tool-based reasoning and orchestration
+Decision engine for scoring and recommendations
+Data Access Layer
+Secure connectors to:
+Internal enterprise systems
+External APIs/services
+Real-time data retrieval and enrichment
+Platform Modules (MVP-3 Core)
+Tool Registry for dynamic tool invocation
+RAG module for knowledge retrieval
+LLM abstraction layer for multi-model support
+Configuration layer for use-case flexibility
+Storage Layer
+Blob Storage for documents and logs
+SQL/Cosmos DB for claims, decisions, and audit data
+User Interface
+Underwriter dashboard
+Review, override, and finalize decisions
+Security & Governance
+Azure AD (RBAC-based access control)
+Secure access across layers
+Logging, monitoring, and audit trails
