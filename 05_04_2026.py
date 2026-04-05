@@ -1,65 +1,74 @@
-Month 1 — Foundation & Setup
+Accelerating AI-Powered Claims Processing using T-Systems AIFS
 
-Focus: Architecture + Ingestion + Infra
+🧠 
+Slide Layout (Recommended: 3 sections)
+1. Problem with Traditional Approach (Left Section)
+Custom development of RAG pipelines increases time-to-market
 
-Active Roles:
+Tight dependency on single LLM provider (vendor lock-in)
 
-Lead AI/ML Architect (high involvement)
-Backend Engineer
-Data Engineer
-AI Platform Engineer
-Business Analyst
-Security Engineer
+Complex implementation of guardrails, governance, and security
 
-Work:
+High engineering effort for orchestration (LangChain, vector DB, APIs)
 
-Final architecture & design approval
-Azure setup (Blob, Service Bus, OpenAI access)
-FastAPI ingestion layer development
-Email integration (Graph API)
-Basic validation (file, schema)
-Security baseline (Azure AD, access control)
-🔹 Month 2 — Core AI & Processing
+Slower transition from PoC to production
 
-Focus: Intelligence layer + pipelines
+2. Our Approach: AIFS-Driven AI Layer (Center Section – Highlight Box)
 
-Active Roles:
 
-Machine Learning Engineer (primary)
-Data Scientist
-Data Engineer
-Backend Engineer
-Integration Engineer
+T-Systems AI Foundation Services (AIFS) enables a pre-built, enterprise-ready AI platform:
 
-Work:
+LLM Hub → Multi-model access (OpenAI, Mistral, Meta, etc.)
 
-LangChain pipeline setup
-LLM integration (Azure OpenAI)
-Classifier → Extractor → Validator flow
-Confidence scoring + rule validation
-OCR + document processing pipeline
-Initial backend API integration
-🔹 Month 3 — Integration, Testing & Go-Live
+SmartChat API → Out-of-the-box RAG (document ingestion + retrieval)
 
-Focus: Stabilization + delivery
+Guardrails & Governance → Built-in access control, filtering, compliance
 
-Active Roles:
+Fine-Tuning APIs → Custom model adaptation (LoRA/DPO)
 
-QA/Test Engineer (primary)
-MLOps Engineer
-Integration Engineer
-Backend Engineer
-Product Owner
-Security Engineer
+Flexible Hosting → Open Telekom Cloud / Hybrid / On-Prem
 
-Work:
 
-End-to-end integration testing
-Human-in-loop workflow implementation
-Performance tuning & validation
-Monitoring setup (Azure Monitor, logs)
-CI/CD & deployment setup
-Final deployment and handover
-✅ Footer (important — add this)
 
-Parallel execution across ingestion, AI, and integration layers ensures timely delivery within the 3-month MVP timeline.
+👉 Up to 80% of AI capabilities available out-of-the-box
+
+3. Integrated Architecture Strategy (Right Section)
+
+
+We adopt a hybrid architecture combining AIFS + Azure:
+
+
+
+AIFS Layer (AI Core)
+
+LLM orchestration & model management
+
+Retrieval-Augmented Generation (RAG)
+
+AI governance & guardrails
+
+
+
+Azure Layer (Enterprise Backbone)
+
+Document ingestion (Graph API + FastAPI)
+
+Secure storage (Blob Storage)
+
+OCR & document processing
+
+Event-driven workflows (Service Bus)
+
+Monitoring & observability
+
+🚀 
+Key Business Impact (Bottom Strip)
+⚡ Faster MVP Delivery (3 months) via pre-built AI services
+
+🔒 Enterprise-grade security & compliance (data sovereignty ensured)
+
+🔄 No vendor lock-in with multi-model flexibility
+
+📈 Reduced engineering effort (~30–40%)
+
+🧩 Seamless integration with existing enterprise systems
