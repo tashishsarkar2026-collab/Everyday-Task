@@ -1,75 +1,167 @@
-Platform Overview
-Unified agentic AI platform enabling rapid development of multiple enterprise use cases
-Built on reusable components instead of use-case specific implementations
-Supports configuration-driven execution (tools, prompts, workflows)
-Core Platform Capabilities
-1. Use Case Configuration Layer
-Define use cases via:
-Tool selection
-Prompt templates
-Workflow rules
-No code changes required for new use cases
-2. Agent Orchestration
-Central LLM-driven agent controlling execution
-Dynamically invokes tools via standardized registry
-Supports multi-step reasoning and workflow execution
-3. Intelligent Data Access
-Real-time data retrieval via registered tools/APIs
-Supports both:
-Internal enterprise systems
-External third-party services
-4. Knowledge & Context Layer (RAG)
-Document ingestion and embedding pipelines
-Context retrieval from vector database
-Enhances decision quality with relevant knowledge
-5. Decision & Response Layer
-Generates:
-Recommendations
-Risk scores
-Explanations
-Supports human-in-the-loop validation
-🔹 Bottom Line (important line)
-Enables rapid onboarding of new AI use cases through configuration, not redevelopment
-✅ Slide 2: Platform Components (Architecture View)
-Backend Platform Layer
-FastAPI-based API gateway & orchestration layer
-Handles request routing, workflow execution, and system coordination
-Agent & Decision Engine
-LLM-powered agent for reasoning and decision-making
-Supports:
-Multi-step execution
-Tool-based interactions
-Explainable outputs
-Tool Registry Layer (NEW – highlight this)
-Centralized registry for all tools/APIs
-Enables:
-Dynamic tool discovery
-Standardized invocation
-Plug-and-play integrations
-Model Abstraction Layer (NEW)
-Decouples platform from specific LLM providers
-Supports multiple models (Azure OpenAI, open-source)
-Enables flexibility and vendor independence
-Data Access & Integration Layer
-Secure connectors to:
-Internal enterprise systems
-External APIs
-Enables real-time data enrichment
-Knowledge Layer (RAG)
-Vector database for embeddings
-Document storage for unstructured data
-Retrieval pipeline for contextual augmentation
-Storage Layer
-Blob storage → documents, logs
-Structured DB → decisions, metadata, audit trails
-User Interface Layer
-Underwriter / Analyst dashboard
-Supports:
-Review
-Override
-Final decision submission
-Governance & Security (Cross-layer)
-Role-based access (Azure AD)
-Audit logging and traceability
-Content filtering and policy enforcement
-Monitoring and observability
+You are an expert enterprise cloud architect specializing in secure AI platforms.
+
+Create a modern, clean, enterprise-grade architecture diagram for:
+
+"Security & Governance Architecture – Agentic AI Platform (MVP-3)"
+
+---
+
+### CONTEXT
+
+This is NOT a generic security diagram.
+
+This is specifically for an **Agentic AI Platform** that includes:
+- LLM-based agents
+- Tool calling (MCP-style)
+- RAG pipelines
+- Enterprise API integrations
+
+The diagram must reflect **real enterprise-grade Azure architecture**.
+
+---
+
+### STRUCTURE (MANDATORY LAYOUT)
+
+Organize the diagram into clearly separated sections:
+
+---
+
+## 1. LEFT PANEL: Governance & Compliance (vertical section)
+
+Include:
+- Responsible AI (Explainability, Transparency)
+- Data Governance (Microsoft Purview)
+- Compliance Tracking (ISO, SOC2)
+- Policy Enforcement (Azure Policy)
+
+---
+
+## 2. TOP LAYER: Identity & Access Management (IAM)
+
+Include:
+- Azure Active Directory (Azure AD)
+- Authentication & Authorization
+- Role-Based Access Control (RBAC)
+- Managed Identities (for service-to-service communication)
+
+Actors:
+- Underwriters
+- Admins
+- Applications / Services
+
+---
+
+## 3. NETWORK SECURITY LAYER
+
+Include:
+- Azure Virtual Network (VNet)
+- Subnets
+- Network Security Groups (NSG)
+- Azure Firewall
+- Private Endpoints / Private Link
+
+Show secure internal communication between components
+
+---
+
+## 4. APPLICATION & API SECURITY
+
+Include:
+- FastAPI Secure Backend (API Gateway)
+- OAuth2 / Token-based Authentication
+- Input Validation
+- Request Filtering
+- RBAC enforcement at API level
+
+---
+
+## 5. AI & LLM SECURITY (IMPORTANT)
+
+Include:
+- Azure OpenAI Service
+- Prompt Validation & Sanitization
+- Output Filtering / Safety Controls
+- PII Protection / Data Leakage Prevention
+
+Show secure interaction between:
+Agent → LLM → Response
+
+---
+
+## 6. TOOL / MCP SECURITY LAYER (VERY IMPORTANT FOR MVP-3)
+
+Include:
+- Secure Tool Connectors
+- API Key Management
+- Managed Identity for tool access
+- Controlled tool invocation
+
+Label this clearly:
+"MCP / Tool Access Security"
+
+---
+
+## 7. DATA SECURITY LAYER
+
+Include:
+- Azure SQL / Cosmos DB
+- Blob Storage
+- Vector Database (for embeddings)
+
+Security features:
+- Encryption at Rest
+- Encryption in Transit (HTTPS/TLS)
+- Access Control (ACLs)
+- Data Isolation
+
+---
+
+## 8. MONITORING & AUDIT (RIGHT PANEL – vertical)
+
+Include:
+- Azure Monitor
+- Application Insights
+- Logging (API calls, tool usage, AI decisions)
+- Full Audit Trail
+
+---
+
+## 9. CORE PLATFORM (CENTER FLOW)
+
+Show secure flow:
+
+User → API → Agent → Tools / RAG / LLM → Data
+
+Ensure arrows show:
+- Authentication flow
+- Secure data movement
+- Controlled access between layers
+
+---
+
+### DESIGN REQUIREMENTS
+
+- Use a clean Azure-style architecture layout
+- Group components into boxes with clear labels
+- Use directional arrows for flow
+- Highlight cross-cutting concerns (security, logging)
+- Keep it visually balanced and not cluttered
+
+---
+
+### OUTPUT FORMAT
+
+- Provide diagram suitable for draw.io / diagrams.net
+- Prefer structured output (Mermaid or XML if possible)
+
+---
+
+### GOAL
+
+The diagram should clearly demonstrate:
+- End-to-end security across an AI platform
+- Governance + compliance integration
+- Secure tool calling (key MVP-3 differentiator)
+- Enterprise-grade monitoring and auditability
+
+Avoid generic cloud diagrams. Make it specific to agentic AI systems.
