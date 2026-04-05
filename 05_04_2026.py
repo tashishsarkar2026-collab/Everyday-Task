@@ -1,167 +1,175 @@
-You are an expert enterprise cloud architect specializing in secure AI platforms.
+You are an expert enterprise cloud architect and visual diagram designer.
 
-Create a modern, clean, enterprise-grade architecture diagram for:
+Create a detailed, visually rich, PowerPoint-style architecture diagram for:
 
 "Security & Governance Architecture – Agentic AI Platform (MVP-3)"
+
+IMPORTANT:
+- DO NOT generate code (no Mermaid, no XML, no scripts)
+- DO NOT provide text explanation only
+- Generate a VISUAL ARCHITECTURE DIAGRAM (like a PPT or Azure architecture diagram)
+- Use labeled boxes, sections, and icons (if possible)
+- The output should look like something that can be directly recreated in PowerPoint or draw.io
 
 ---
 
 ### CONTEXT
 
-This is NOT a generic security diagram.
+This is an enterprise-grade Agentic AI Platform built on Azure.
 
-This is specifically for an **Agentic AI Platform** that includes:
-- LLM-based agents
-- Tool calling (MCP-style)
-- RAG pipelines
-- Enterprise API integrations
-
-The diagram must reflect **real enterprise-grade Azure architecture**.
+The diagram must clearly show how security, governance, and monitoring are enforced across all layers of the platform.
 
 ---
 
 ### STRUCTURE (MANDATORY LAYOUT)
 
-Organize the diagram into clearly separated sections:
+Design the diagram in horizontal layers and vertical governance sections.
 
 ---
 
-## 1. LEFT PANEL: Governance & Compliance (vertical section)
+### 1. LEFT VERTICAL SECTION (Governance & Compliance)
+
+Create a vertical block on the left titled:
+
+"Governance & Compliance"
 
 Include:
 - Responsible AI (Explainability, Transparency)
 - Data Governance (Microsoft Purview)
-- Compliance Tracking (ISO, SOC2)
+- Compliance Tracking (ISO, SOC)
 - Policy Enforcement (Azure Policy)
 
 ---
 
-## 2. TOP LAYER: Identity & Access Management (IAM)
+### 2. TOP LAYER: IDENTITY & ACCESS MANAGEMENT (IAM)
 
 Include:
+- Users:
+  - Underwriters
+  - Admins
 - Azure Active Directory (Azure AD)
 - Authentication & Authorization
 - Role-Based Access Control (RBAC)
-- Managed Identities (for service-to-service communication)
-
-Actors:
-- Underwriters
-- Admins
-- Applications / Services
+- Managed Identity (for service-to-service access)
 
 ---
 
-## 3. NETWORK SECURITY LAYER
+### 3. NETWORK SECURITY LAYER
 
 Include:
 - Azure Virtual Network (VNet)
 - Subnets
-- Network Security Groups (NSG)
 - Azure Firewall
+- Network Security Groups (NSGs)
 - Private Endpoints / Private Link
 
-Show secure internal communication between components
+Show secure connectivity between services.
 
 ---
 
-## 4. APPLICATION & API SECURITY
+### 4. APPLICATION & API SECURITY
 
 Include:
-- FastAPI Secure Backend (API Gateway)
-- OAuth2 / Token-based Authentication
+- Secure FastAPI Backend
+- OAuth/JWT Token-based Authentication
 - Input Validation
 - Request Filtering
-- RBAC enforcement at API level
+- RBAC enforcement
 
 ---
 
-## 5. AI & LLM SECURITY (IMPORTANT)
+### 5. AGENT & AI SECURITY (VERY IMPORTANT FOR MVP-3)
 
 Include:
-- Azure OpenAI Service
+- AI Orchestration Layer (Agent)
 - Prompt Validation & Sanitization
-- Output Filtering / Safety Controls
-- PII Protection / Data Leakage Prevention
-
-Show secure interaction between:
-Agent → LLM → Response
+- Output Filtering
+- PII/Data Leakage Prevention
+- Secure access to Azure OpenAI
 
 ---
 
-## 6. TOOL / MCP SECURITY LAYER (VERY IMPORTANT FOR MVP-3)
+### 6. TOOL / MCP SECURITY LAYER
 
 Include:
 - Secure Tool Connectors
 - API Key Management
-- Managed Identity for tool access
-- Controlled tool invocation
-
-Label this clearly:
-"MCP / Tool Access Security"
+- Managed Identity for tools
+- Controlled access to external APIs
 
 ---
 
-## 7. DATA SECURITY LAYER
+### 7. DATA SECURITY LAYER
 
 Include:
 - Azure SQL / Cosmos DB
 - Blob Storage
-- Vector Database (for embeddings)
+- Vector Database
 
-Security features:
-- Encryption at Rest
-- Encryption in Transit (HTTPS/TLS)
-- Access Control (ACLs)
-- Data Isolation
+Show:
+- Encryption in transit (HTTPS/TLS)
+- Encryption at rest
+- Access control (ACLs)
+- Data isolation
 
 ---
 
-## 8. MONITORING & AUDIT (RIGHT PANEL – vertical)
+### 8. RIGHT VERTICAL SECTION (Monitoring & Audit)
+
+Create a vertical block on the right titled:
+
+"Monitoring & Audit"
 
 Include:
 - Azure Monitor
 - Application Insights
-- Logging (API calls, tool usage, AI decisions)
+- Logging (user actions, tool calls, AI decisions)
+- Alerts & Metrics
 - Full Audit Trail
 
 ---
 
-## 9. CORE PLATFORM (CENTER FLOW)
+### 9. CROSS-LAYER ELEMENT (IMPORTANT)
 
-Show secure flow:
+Across the middle or bottom, include:
 
-User → API → Agent → Tools / RAG / LLM → Data
+"Azure Infrastructure"
 
-Ensure arrows show:
-- Authentication flow
-- Secure data movement
-- Controlled access between layers
+Show that all components are deployed within Azure secure environment.
 
 ---
 
-### DESIGN REQUIREMENTS
+### 10. FLOW INDICATIONS
 
-- Use a clean Azure-style architecture layout
-- Group components into boxes with clear labels
-- Use directional arrows for flow
-- Highlight cross-cutting concerns (security, logging)
-- Keep it visually balanced and not cluttered
+Use arrows to show:
+- User → API → Agent → Tools → Data
+- Security checks at each stage
+- Monitoring capturing all actions
 
 ---
 
-### OUTPUT FORMAT
+### 11. STYLE REQUIREMENTS
 
-- Provide diagram suitable for draw.io / diagrams.net
-- Prefer structured output (Mermaid or XML if possible)
+- Use clean enterprise layout (like Azure reference architecture diagrams)
+- Use boxes with headings for each section
+- Use icons where possible (user, database, shield, cloud)
+- Clearly separate layers
+- Avoid clutter, keep it structured and readable
 
 ---
 
 ### GOAL
 
-The diagram should clearly demonstrate:
-- End-to-end security across an AI platform
-- Governance + compliance integration
-- Secure tool calling (key MVP-3 differentiator)
-- Enterprise-grade monitoring and auditability
+The diagram should clearly communicate:
 
-Avoid generic cloud diagrams. Make it specific to agentic AI systems.
+- End-to-end security across the platform
+- Governance embedded at every layer
+- Enterprise-grade compliance and monitoring
+- Secure AI and tool usage in an Agentic system
+
+---
+
+Again:
+DO NOT generate code.
+DO NOT generate Mermaid.
+Create a visual architecture diagram representation only.
