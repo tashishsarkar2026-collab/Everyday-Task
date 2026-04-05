@@ -1,117 +1,119 @@
-Create a clean, enterprise-grade security and governance architecture diagram for an AI-powered underwriting system built on Azure.
+Create an enterprise-grade Security & Governance architecture diagram for an AI-driven system on Azure, improving a basic linear diagram into a layered, modern cloud architecture.
 
 Objective:
 
-The diagram should clearly represent layered security, governance, and compliance controls across the system. It should be visually clean, structured, and suitable for executive presentation.
+Transform a simple vertical security flow into a structured, multi-layered enterprise architecture similar to modern Azure reference diagrams.
 
 ---
 
 Key Requirements:
 
 - Use Azure-native services only
-- Show security as a layered or cross-cutting framework
-- Keep the diagram structured and not cluttered
-- Clearly label each security layer
-- Use icons where possible (Azure AD, Monitor, etc.)
+- Show layered architecture (not linear boxes)
+- Group related security controls logically
+- Include clear visual sections (left, center, right)
+- Maintain clarity while increasing depth
 
 ---
 
-🧱 Security Layers to Include
+🧱 Structure of Diagram
 
 ---
 
-1. Identity & Access Management
+LEFT PANEL: Governance & Compliance
 
-- Azure Active Directory (AAD)
-- Role-Based Access Control (RBAC)
-- User authentication & authorization
-- Managed Identity for service-to-service access
-
----
-
-2. API & Application Security
-
-- Secure FastAPI endpoints
-- Token-based authentication (OAuth/JWT)
-- RBAC validation at API layer
-- Input validation and request filtering
+- Responsible AI (Explainability, Transparency)
+- Data Governance (Microsoft Purview)
+- Compliance (ISO, SOC)
+- Azure Policy Enforcement
 
 ---
 
-3. Data Security
+TOP LAYER: Identity & Access Management
+
+- Azure Active Directory (Azure AD)
+- Authentication & Authorization
+- RBAC (Role-Based Access Control)
+- Managed Identity (service-to-service)
+
+Include:
+
+- Users: Underwriters, Admins
+
+---
+
+NETWORK & INFRASTRUCTURE LAYER
+
+- Azure Virtual Network (VNet)
+- Subnets
+- Azure Firewall
+- Network Security Groups (NSGs)
+- Private Endpoints / Private Link
+
+---
+
+APPLICATION SECURITY LAYER
+
+- Secure FastAPI Backend
+- Token-based Authentication (OAuth/JWT)
+- RBAC enforcement at API layer
+- Input validation & request filtering
+
+---
+
+MCP / TOOL ACCESS SECURITY (IMPORTANT)
+
+- Secure connectors to multiple data sources
+- API Key / Managed Identity authentication
+- Controlled tool invocation
+- Least privilege access
+- Secure API gateway / connector layer
+
+---
+
+AI & LLM SECURITY
+
+- Azure OpenAI (secure access)
+- Prompt validation & sanitization
+- Output filtering & safety controls
+- PII masking / data protection
+
+---
+
+DATA SECURITY LAYER
 
 - Encryption at rest (Blob, SQL, Cosmos DB)
 - Encryption in transit (HTTPS/TLS)
-- Secure storage access controls
-- Data isolation and protection
+- Access control (ACLs)
+- Data isolation
 
 ---
 
-4. MCP / Tool Access Security
-
-- Secure connectors to internal and external systems
-- Managed Identity / API keys for tool access
-- Controlled and auditable tool invocation
-- Least-privilege access to data sources
-
----
-
-5. AI / LLM Security
-
-- Secure access to Azure OpenAI
-- Prompt validation and input sanitization
-- Output filtering and safety controls
-- Prevention of data leakage
-
----
-
-6. Monitoring & Audit
+RIGHT PANEL: MONITORING & AUDIT
 
 - Azure Monitor
 - Application Insights
-- Logging of:
+- Logging:
   - User actions
   - AI decisions
   - Tool calls
-- Full audit trail and traceability
-
----
-
-7. Governance & Compliance
-
-- Policy enforcement
-- Data access governance
-- Compliance tracking
-- Responsible AI practices (explainability, transparency)
-
----
-
-🔄 Diagram Structure
-
-- Show system layers in center:
-  (UI → Backend → AI → Tool Layer → Data Sources → Storage)
-
-- Overlay or surround with security layers:
-  
-  - Identity (top)
-  - Data (bottom)
-  - Monitoring (side)
-  - Governance (cross-cutting)
+- Full audit trail
 
 ---
 
 🎯 Style Requirements
 
-- Clean, layered diagram
-- No clutter or excessive text
-- Clear labels for each security layer
-- Enterprise look (not cartoonish)
-- Easy to understand in under 30 seconds
+- Replace vertical boxes with layered architecture
+- Use icons where possible
+- Group components in horizontal sections
+- Keep text minimal but meaningful
+- Ensure readability and balance
+- Avoid clutter but include all key layers
 
 ---
 
 Output:
 
-A visually structured security and governance architecture diagram showing layered protection across the entire system.
+A modern, enterprise-grade Azure security architecture diagram with clear layers and structured grouping, similar to high-quality consulting presentations.
 
 ---
